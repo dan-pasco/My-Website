@@ -1,6 +1,6 @@
 resource "aws_elb" "my-elb" {
   name               = "My-ELB"
-  subnets = [ aws_subnet.pubsub-1.id ]
+  subnets = [ aws_subnet.pubsub-1.id , aws_subnet.pubsub-2.id]
   security_groups = [ aws_security_group.sg-elb.id]
   
 
